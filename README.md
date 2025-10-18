@@ -6,7 +6,7 @@ A beginner-friendly project demonstrating **client-side form validation** using 
 
 ## 🚀 Live Demo
 
-Check out the hosted live version here: [Form Validation Demo]( https://maha561.github.io/javascript_Form-Validation/)  
+Check out the hosted live version here: [Form Validation Demo]( https://maha561.github.io/javascript_Form-Validation/) . 
 *(Replace `YOUR_HOSTED_LINK_HERE` with your actual live URL)*
 
 ---
