@@ -54,13 +54,65 @@
 
         function validateForm(){
 
-            var Name = document.forms[regForm][Name].value;
+            var Name = document.forms["regForm"]["Name"].value;
 
-            var email = document.forms[regForm][email].value;
+            var email = document.forms["regForm"]["email"].value;
 
-            var phnumber = document.forms[regForm][phonenumber].value;
+            var phnumber = document.forms["regForm"]["phonenumber"].value;
 
-            var pass = document.forms[regForm][pass].value;
+            var pass = document.forms["regForm"]["pass"].value;
+
+            var cpass = document.forms["regForm"]["cpass"].value;
+
+            var gender = document.forms["regForm"]["gender"].value;
+
+            if(Name== ""|| email ==""||phnumber == ""||pass==""||cpass==""||gender==""){
+
+                 alert("⚠️ Please fill all the fields before submitting!");
+                 return false;
+            }
+
+             // Email check: must look like something@something.something
+
+
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (!emailPattern.test(email)) {
+               alert("Please enter a valid email address (example: abc@gmail.com)");
+                return false;
+            }
+
+            // Phone number check: must have 10 digits
+
+           var phonePattern = /^[0-9]{10}$/;
+       if (!phonePattern.test(phnumber)) {
+    alert("Please enter a valid 10-digit phone number!");
+    return false;
+     }
+
+
+     // password checking
+
+     // Password length check (min 6 chars)
+if (pass.length < 6) {
+    alert("Password must be at least 6 characters long!");
+    return false;
+}
+
+// Confirm password check
+if (pass !== cpass) {
+    alert("Password and Confirm Password do not match!");
+    return false;
+}
+
+
+
+
+
+
+
 
 
 
